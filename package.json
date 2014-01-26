@@ -1,0 +1,41 @@
+{
+  "name": "generator-staticsite",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/adrianolaru/generator-staticsite",
+  "bugs": "https://github.com/adrianolaru/generator-staticsite/issues",
+  "author": {
+    "name": "Adrian Olaru",
+    "email": "agolaru@gmail.com",
+    "url": "https://github.com/adrianolaru"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adrianolaru/generator-staticsite.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.14.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
