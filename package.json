@@ -1,16 +1,23 @@
 {
   "name": "generator-staticsite",
   "version": "0.0.1",
-  "description": "A generator for Yeoman",
+  "description": "Creates an Assemble boilerplate project with built-in support for SASS (with Bourbon and Neat), CoffeeScript and an optimized build.",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "assemble",
+    "handlebars",
+    "sass",
+    "staticsite",
+    "static",
+    "grunt",
+    "sass",
+    "coffeescript"
   ],
   "homepage": "https://github.com/adrianolaru/generator-staticsite",
   "bugs": "https://github.com/adrianolaru/generator-staticsite/issues",
   "author": {
     "name": "Adrian Olaru",
-    "email": "agolaru@gmail.com",
-    "url": "https://github.com/adrianolaru"
+    "email": "agolaru@gmail.com"
   },
   "main": "app/index.js",
   "repository": {
@@ -18,19 +25,19 @@
     "url": "git://github.com/adrianolaru/generator-staticsite.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter spec"
   },
   "dependencies": {
     "yeoman-generator": "~0.14.0"
   },
   "devDependencies": {
-    "mocha": "~1.14.0"
+    "mocha": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
   },
   "engines": {
-    "node": ">=0.8.0",
+    "node": ">=0.10.0",
     "npm": ">=1.2.10"
   },
   "licenses": [
