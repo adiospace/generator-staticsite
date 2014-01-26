@@ -1,6 +1,6 @@
 {
   "name": "generator-staticsite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Creates an Assemble boilerplate project with built-in support for SASS (with Bourbon and Neat), CoffeeScript and an optimized build.",
   "keywords": [
     "yeoman-generator",
