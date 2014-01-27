@@ -6,6 +6,7 @@ A generator for [Yeoman](http://yeoman.io) with support for:
 - [SASS](http://sass-lang.com/) with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)
 - [CoffeeScript](http://coffeescript.org/)
 - Optimized Build including concataneted, minified, cache busted assets
+- Development server with LiveReload support
 
 
 ## Getting Started
