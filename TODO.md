@@ -7,4 +7,3 @@
 - integrate bower
 - nice theme for starter
 - work at the layout (add mobile support and so on)
-- gitignore file
