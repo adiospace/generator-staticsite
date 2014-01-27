@@ -26,6 +26,39 @@ mkdir project && cd $_
 yo staticsite
 ```
 
+## Boilerplate
+The following directory structure generated after run `yo staticsite`:
+
+    .
+    ├── .editorconfig
+    ├── .jshintrc
+    ├── .gitignore
+    ├── Gruntfile.js
+    ├── package.json
+    ├── src
+    │   ├── assets
+    │   │   ├─── scripts
+    │   |   │   ├── module1.js
+    │   |   │   └── module2.coffee
+    │   │   └── styles
+    │   |   │   ├── modules
+    │   |   │   |   ├── _all.scss
+    │   |   │   |   └── _header.scss
+    │   |   │   └── main.scss
+    │   ├── content
+    │   │   └── markdown.md
+    │   ├── data
+    │   │   └── site.yml
+    │   └── templates
+    │       ├── layouts
+    │       │   └── default.hbs
+    │       ├── pages
+    │       │   ├── index.hbs
+    │       └── partials
+    │           └── header.hbs
+    └── node_modules
+
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
