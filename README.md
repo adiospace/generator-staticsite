@@ -5,14 +5,13 @@ A generator for [Yeoman](http://yeoman.io).
 
 ## Getting Started
 
-- Install Yeoman:
+Install Yeoman:
 
 ```bash
 npm install -g yo
 ```
 
-
-- Install the generator:
+Install the generator:
 
 ```bash
 npm install -g generator-assemble
