@@ -2,7 +2,7 @@
 
 A generator for [Yeoman](http://yeoman.io) with support for 
  
-- [Assemble](http://assemble.io/), a static site generator for [Grunt](http://gruntjs.com/) with support for Layouts [Handleblars Templates](http://handlebarsjs.com/), Markdown and Data separation
+- [Assemble](http://assemble.io/), a static site generator for [Grunt](http://gruntjs.com/) with Layouts, [Handleblars Templates](http://handlebarsjs.com/), Markdown and Data separation
 - [SASS](http://sass-lang.com/) with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)
 - [CoffeeScript](http://coffeescript.org/)
 - Optimized Build including concataneted, minified, cache busted assets.
