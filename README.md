@@ -1,4 +1,4 @@
-# generator-staticsite [![Build Status](https://secure.travis-ci.org/adrianolaru/generator-staticsite.png?branch=master)](https://travis-ci.org/adrianolaru/generator-staticsite)
+# StaticSite [![Build Status](https://secure.travis-ci.org/adrianolaru/generator-staticsite.png?branch=master)](https://travis-ci.org/adrianolaru/generator-staticsite)
 
 A generator for [Yeoman](http://yeoman.io) with support for:
  
