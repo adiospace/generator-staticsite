@@ -11,7 +11,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-connect": "~0.6.0",
     "grunt-contrib-watch": "~0.5.3",
-    "load-grunt-tasks": "~0.2.1",
+    "load-grunt-tasks": "~0.3.0",
     "time-grunt": "~0.2.7",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-usemin": "~2.0.2",
@@ -24,7 +24,8 @@
     "grunt-contrib-copy": "~0.5.0",
     "jshint-stylish": "~0.1.5",
     "node-neat": "~1.1.0",
-    "grunt-contrib-imagemin": "~0.5.0"
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-newer": "~0.6.1"
   },
   "keywords": [
     "static site",

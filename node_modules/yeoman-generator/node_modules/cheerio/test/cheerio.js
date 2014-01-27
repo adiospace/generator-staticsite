@@ -32,6 +32,13 @@ describe('cheerio', function() {
     expect($('#fruits')).to.be.empty();
   });
 
+  it('$(node) : should override previously-loaded nodes', function() {
+    var C = $.load('<div><span></span></div>');
+    var spanNode = C('span')[0];
+    var $span = C(spanNode);
+    expect($span[0]).to.equal(spanNode);
+  });
+
   it('should be able to create html without a root or context', function() {
     var $h2 = $('<h2>');
     expect($h2).to.not.be.empty();
@@ -127,6 +134,11 @@ describe('cheerio', function() {
     expect($a[0].children[0].data).to.equal('Save');
   });
 
+  it('should not create a top-level node', function() {
+    var $elem = $('* div', '<div>');
+    expect($elem).to.have.length(0);
+  });
+
   it('should be able to select multiple elements: $(".apple, #fruits")', function() {
     var $elems = $('.apple, #fruits', fruits);
     expect($elems).to.have.length(2);
@@ -196,6 +208,16 @@ describe('cheerio', function() {
   it('should gracefully degrade on complex, unmatched queries', function() {
     var $elem = $('Eastern States Cup #8-fin&nbsp;<br>Downhill&nbsp;');
     expect($elem).to.have.length(0); // []
+  });
+
+  it('(extended Array) should not interfere with prototype methods (issue #119)', function() {
+    var extended = [];
+    var custom = extended.find = extended.children = extended.each = function() {};
+    var $empty = $(extended);
+
+    expect($empty.find).to.be($.prototype.find);
+    expect($empty.children).to.be($.prototype.children);
+    expect($empty.each).to.be($.prototype.each);
   });
 
 });
