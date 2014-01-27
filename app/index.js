@@ -46,8 +46,8 @@ StaticGenerator.prototype.app = function app() {
   this.copy('Gruntfile.js', 'Gruntfile.js');
 
   this.copy('editorconfig', '.editorconfig');
+  this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
-
 
   this.directory('src', 'src');
 };
