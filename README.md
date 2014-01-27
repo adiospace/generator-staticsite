@@ -14,7 +14,7 @@ npm install -g yo
 Install the generator:
 
 ```bash
-npm install -g generator-assemble
+npm install -g generator-staticsite
 ```
 
 ## Usage
