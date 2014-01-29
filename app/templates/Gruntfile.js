@@ -1,14 +1,15 @@
 'use strict';
 
-// # Globbing
+// NOTE:
+// # For performance reasons we're only matching one level down
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
+//
+// Use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-//
-// `dist`, `.tmp`, `src` dirs are used for dev to serve and watch files
-// `dist` dir is used for build to generate optmized builds
+// NOTE:
+// In dev, `dist`, `.tmp`, `src` dirs are used serve and watch files.
 //
 
 module.exports = function(grunt) {
@@ -32,10 +33,6 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
         tasks: ['newer:assemble']
       },
-      sass: {
-        files: ['<%= config.src %>/assets/styles/{,*/}*.scss'],
-        tasks: ['sass']
-      },
       coffee: {
         files: ['<%= config.src %>/assets/scripts/{,*/}*.coffee'],
         tasks: ['newer:coffee']
@@ -44,6 +41,13 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/assets/scripts/{,*/}*.js'],
         tasks: ['newer:jshint']
       },
+      sass: {
+        // newer doesn't work with include files
+        // https://github.com/tschaub/grunt-newer/issues/29
+        files: ['<%= config.src %>/assets/styles/{,*/}*.scss'],
+        tasks: ['sass']
+      },
+
 
       livereload: {
         options: {
@@ -235,6 +239,30 @@ module.exports = function(grunt) {
       }
     },
 
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true,
+          collapseBooleanAttributes: true,
+          removeRedundantAttributes: true,
+          removeEmptyAttributes: true,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>',
+          src: '{,*/}*.html',
+          dest: '<%= config.dist %>'
+        }]
+      }
+    },
+
+    newer: {
+      options: {
+        cache: '.tmp'
+      }
+    },
+
     clean: {
       dist: ['<%= config.dist %>/', '.tmp/']
     }
@@ -268,7 +296,8 @@ module.exports = function(grunt) {
     'cssmin',
     'rev',
     'usemin',
-    'imagemin'
+    'imagemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', ['server']);
