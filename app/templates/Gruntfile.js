@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['<%= config.src %>/assets/styles/{,*/}*.scss'],
-        tasks: ['newer:sass']
+        tasks: ['sass']
       },
       coffee: {
         files: ['<%= config.src %>/assets/scripts/{,*/}*.coffee'],
@@ -185,7 +185,7 @@ module.exports = function(grunt) {
     imagemin: {
       dist: {
         options: {
-          optimizationLevel: 3
+          cache: false
         },
 
         files: [{
