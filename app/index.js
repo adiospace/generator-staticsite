@@ -48,6 +48,7 @@ StaticGenerator.prototype.app = function app() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
+  this.copy('jshintignore', '.jshintignore');
 
   this.directory('src', 'src');
 };
