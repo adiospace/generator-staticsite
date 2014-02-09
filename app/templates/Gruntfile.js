@@ -95,20 +95,25 @@ module.exports = function(grunt) {
     },
 
     assemble: {
+      options: {
+        flatten: true,
+        expand: true,
+        assets: '<%= config.dist %>/assets',
+        layout: 'default.hbs',
+        layoutdir: '<%= config.src %>/templates/layouts',
+        data: '<%= config.src %>/data/*.{json,yml}',
+        partials: '<%= config.src %>/templates/partials/*.hbs'
+      },
       pages: {
-        options: {
-          flatten: true,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/templates/layouts/default.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs'
-        },
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/templates/pages/',
+          src: '**/*.hbs',
+          dest: '<%= config.dist %>/',
+          ext: '.html'
+        }]
       }
     },
-
 
     sass: {
       dist: {
