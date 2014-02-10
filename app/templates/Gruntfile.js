@@ -1,4 +1,3 @@
-'use strict';
 
 // NOTE:
 // # For performance reasons we're only matching one level down
@@ -13,6 +12,8 @@
 //
 
 module.exports = function(grunt) {
+  'use strict';
+  
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
   // load the rest of non-grunt tasks
